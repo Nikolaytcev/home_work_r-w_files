@@ -11,7 +11,7 @@ files = os.listdir(os.chdir(f'{adrr}\sorted'))
 result_file_name = 'result_file.txt'
 
 
-def amount_lines(files):
+def amount_lines(files, result_file_name):
     count_dict = {}
     for i in files:
         if i != result_file_name:
@@ -33,11 +33,10 @@ def result_file(files_per_lines, result_file_name):
                 with open(file, 'r', encoding='utf-8') as f:
                     for line in f:
                         res_file.write(line + '\n')
-        
     return res_file
                         
 
-files_per_lines = amount_lines(files)
+files_per_lines = amount_lines(files, result_file_name)
 result_file(files_per_lines, result_file_name)
 
 
