@@ -8,7 +8,7 @@ Created on Sat Dec  3 15:30:08 2022
 def cook_book(file):
     cook_book = {}
     dishes = []
-    with open(file, 'r',encoding="utf-8") as file:
+    with open(file, 'r', encoding="utf-8") as file:
         for line in file:
             if ' |' not in line.strip() and line.strip().isdigit() == False and line != '\n':
                 l = line.strip()
@@ -36,3 +36,5 @@ def get_shop_list_by_dishes(dishes, person_coun):
     
 cook_book, dishes = cook_book('recipes.txt')
 ingredients = get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
+print(cook_book)
+print(ingredients)

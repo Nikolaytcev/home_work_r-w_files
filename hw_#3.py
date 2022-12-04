@@ -32,7 +32,8 @@ def result_file(files_per_lines, result_file_name):
                 res_file.write(str(len_file) + '\n')
                 with open(file, 'r', encoding='utf-8') as f:
                     for line in f:
-                        res_file.write(line + '\n')
+                        res_file.write(line)
+                res_file.write('\n')
     return res_file
                         
 
